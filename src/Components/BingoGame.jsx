@@ -37,7 +37,7 @@ const BingoGame = () => {
           <div className="number-board">
             {Array.from({ length: 10 }, (_, rowIndex) => (
               <div key={rowIndex} className="row">
-                {Array.from({ length: 9 }, (_, columnIndex) => {
+                {Array.from({ length: 10 }, (_, columnIndex) => {
                   const number = rowIndex * 10 + columnIndex + 1;
                   const isRolled = currentNumber === number;
 

@@ -6,15 +6,16 @@
 
 .row {
   display: flex;
+  justify-content: center;
 }
 
 .number-cell {
   border: 1px solid #ccc;
   padding: 10px;
   text-align: center;
-  font-size: 25px;
+  font-size: 20px;
   cursor: pointer;
-  flex: 1;
+  width: 8%;
   margin: 5px;
 
   /* Animation */
@@ -43,7 +44,7 @@
 }
 @media only screen and (max-width: 768px) {
   .number-cell {
-    font-size: 18px; /* Adjust font size for smaller screens */
+    font-size: 15px; /* Adjust font size for smaller screens */
     padding: 8px; /* Adjust padding for smaller screens */
     margin: 3px; /* Adjust margin for smaller screens */
     flex-basis: auto; /* Allow flexibility for smaller screens */
@@ -51,7 +52,7 @@
 }
 @media only screen and (max-width: 1024px) {
   .number-cell {
-    font-size: 18px; /* Adjust font size for smaller screens */
+    font-size: 15px; /* Adjust font size for smaller screens */
     padding: 8px; /* Adjust padding for smaller screens */
     margin: 3px; /* Adjust margin for smaller screens */
     flex-basis: auto; /* Allow flexibility for smaller screens */
