@@ -41,3 +41,19 @@
     opacity: 1;
   }
 }
+@media only screen and (max-width: 768px) {
+  .number-cell {
+    font-size: 18px; /* Adjust font size for smaller screens */
+    padding: 8px; /* Adjust padding for smaller screens */
+    margin: 3px; /* Adjust margin for smaller screens */
+    flex-basis: auto; /* Allow flexibility for smaller screens */
+  }
+}
+@media only screen and (max-width: 1024px) {
+  .number-cell {
+    font-size: 18px; /* Adjust font size for smaller screens */
+    padding: 8px; /* Adjust padding for smaller screens */
+    margin: 3px; /* Adjust margin for smaller screens */
+    flex-basis: auto; /* Allow flexibility for smaller screens */
+  }
+}
