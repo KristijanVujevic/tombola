@@ -21,7 +21,7 @@ const BingoGame = () => {
 
   const getRandomNumber = () => {
     const availableNumbers = Array.from(
-      { length: 99 },
+      { length: 90 },
       (_, index) => index + 1
     ).filter((number) => !calledNumbers.includes(number));
     const randomIndex = Math.floor(Math.random() * availableNumbers.length);
@@ -35,10 +35,10 @@ const BingoGame = () => {
         <div className="col-md-6">
           <Tema />
           <div className="number-board">
-            {Array.from({ length: 10 }, (_, rowIndex) => (
+            {Array.from({ length: 9 }, (_, rowIndex) => (
               <div key={rowIndex} className="row">
                 {Array.from({ length: 10 }, (_, columnIndex) => {
-                  const number = rowIndex * 10 + columnIndex + 1;
+                  const number = rowIndex * 10 + columnIndex + 1; // Corrected calculation
                   const isRolled = currentNumber === number;
 
                   return (
