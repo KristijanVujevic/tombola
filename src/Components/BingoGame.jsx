@@ -67,10 +67,10 @@ const BingoGame = () => {
             onClick={callNumber}
             disabled={calledNumbers.length === 99}
           >
-            Call Number
+            Slj. Broj
           </button>
           <button className="btn btn-danger" onClick={resetGame}>
-            Reset Game
+            Resetiraj
           </button>
         </div>
       </div>

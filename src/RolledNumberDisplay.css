@@ -1,9 +1,9 @@
 /* RolledNumberDisplay.css */
 .rolled-number-display {
   position: fixed;
-  width: 40vw;
+  width: 20vw;
   top: 80%;
-  left: 50%;
+  left: 80%;
   transform: translate(-50%, -50%);
   background-color: #fff;
   padding: 20px;
