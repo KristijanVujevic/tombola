@@ -1,0 +1,43 @@
+/* NumberBoard.css */
+.number-board {
+  display: flex;
+  flex-direction: column;
+}
+
+.row {
+  display: flex;
+}
+
+.number-cell {
+  border: 1px solid #ccc;
+  padding: 10px;
+  text-align: center;
+  font-size: 25px;
+  cursor: pointer;
+  flex: 1;
+  margin: 5px;
+
+  /* Animation */
+  opacity: 1;
+}
+
+.called {
+  text-decoration: line-through;
+  background-color: #b6b5b5; /* Add a background color for called numbers */
+  pointer-events: none; /* Disable clicking on called numbers */
+}
+
+.rolled {
+  animation: rollIn 0.5s ease-in-out;
+}
+
+@keyframes rollIn {
+  0% {
+    transform: translateY(-100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
