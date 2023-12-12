@@ -1,12 +1,19 @@
-// BingoGame.js
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import "../BingoGame.css"; // Import your BingoGame specific CSS file
 import RolledNumberDisplay from "./RolledNumberDisplay";
 import Tema from "./Tema";
+import { Icon } from "@iconify/react";
 
 const BingoGame = () => {
   const [calledNumbers, setCalledNumbers] = useState([]);
   const [currentNumber, setCurrentNumber] = useState(null);
+  const [userName, setUserName] = useState("");
+
+  useEffect(() => {
+    // Ask for the user's name when the component mounts
+    const name = window.prompt("Unesite ime:");
+    setUserName(name || ""); // Set to "Guest" if the user cancels or enters an empty name
+  }, []); // Run this effect only once when the component mounts
 
   const callNumber = () => {
     const newNumber = getRandomNumber();
@@ -30,7 +37,9 @@ const BingoGame = () => {
 
   return (
     <div className="container mt-5">
-      <h1 className="text-center mb-4">Tombola</h1>
+      <h1 className="text-center mb-4">
+        Tombola{userName && <span> {userName}</span>}
+      </h1>
       <div className="row justify-content-center">
         <div className="col-md-6">
           <Tema />
@@ -67,10 +76,24 @@ const BingoGame = () => {
             onClick={callNumber}
             disabled={calledNumbers.length === 99}
           >
-            Slj. Broj
+            <Icon
+              icon="octicon:number-16"
+              color="blue"
+              width="32"
+              height="32"
+            />
           </button>
-          <button className="btn btn-danger" onClick={resetGame}>
-            Resetiraj
+          <button
+            className="btn btn-danger"
+            onClick={resetGame}
+            style={{ marginLeft: "200px" }}
+          >
+            <Icon
+              icon="system-uicons:reset-hard"
+              color="black"
+              width="32"
+              height="32"
+            />
           </button>
         </div>
       </div>

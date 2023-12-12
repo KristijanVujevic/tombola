@@ -58,3 +58,6 @@
     flex-basis: auto; /* Allow flexibility for smaller screens */
   }
 }
+.btn {
+  margin-top: 20px;
+}
